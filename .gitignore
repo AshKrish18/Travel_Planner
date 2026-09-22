@@ -21,3 +21,9 @@ __pycache__/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Compiled Python files
+*.pyc
+*.py[cod]
+*$py.class
+__pycache__/
