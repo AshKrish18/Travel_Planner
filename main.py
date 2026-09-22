@@ -143,7 +143,11 @@ async def budget_calculator(
     db: Session = Depends(get_db)
 ):
     pinned_places = db.query(TouristPlaceModel).all()
-    previous_response = get_budget_itenery(days, db=db,original_place=original_place)
+    previous_response = await get_budget_itenery(
+    days=days, 
+    db=db, 
+    original_place=original_place
+)
 
     result = await budget_estimation(
         places=pinned_places,

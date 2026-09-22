@@ -29,7 +29,7 @@ async def making_itenary(places: list[TouristPlaceModel], day : int, original_pl
     """
 
     response = client.models.generate_content(
-        model="gemini-3.5-flash",
+        model="gemini-3.6-flash",
         contents=prompt   
     )
 
@@ -77,7 +77,7 @@ Also make the budget with response to {responese} as this is the most ideal budg
 """
 
     result = client.models.generate_content(
-        model="gemini-3.5-flash",
+        model="gemini-3.6-flash",
         contents=prompt
     )
 
@@ -111,7 +111,7 @@ async def suggestions(pinned_places: list[TouristPlaceModel]):
     Do not include markdown code block formatting like ```json. Return raw JSON string only.
     """
    response = client.models.generate_content(
-        model="gemini-3.5-flash",
+        model="gemini-3.6-flash",
         contents=prompt
     )
 
